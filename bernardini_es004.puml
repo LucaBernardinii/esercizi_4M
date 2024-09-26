@@ -1,0 +1,9 @@
+@startuml
+class Calcolatrice
+{
+{static} addizione
+{static} sottrazione
+{static} moltiplicazione
+{static} divisione
+}
+@enduml
