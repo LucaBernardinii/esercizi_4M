@@ -1,9 +1,11 @@
 @startuml
 class Calcolatrice
 {
-{static} addizione
-{static} sottrazione
-{static} moltiplicazione
-{static} divisione
+-{static} addizione
+-{static} sottrazione
+-{static} moltiplicazione
+-{static} divisione
+
++__init__(num1, num2)
 }
-@enduml
+@endum
