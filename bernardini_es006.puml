@@ -1,0 +1,21 @@
+@startuml name
+class Pagamento
+{
+def __init__(self, processa_pagamento):
+        self.processa_pagamento = processa_pagamento
+}
+class CartaDiCredito
+{
+    def __init__(self, processa_pagamento):
+        super().__init__(processa_pagamento)
+        self.processa_pagamento = processa_pagamento
+}
+class PayPal
+{
+    def __init__(self, processa_pagamento):
+        super().__init__(processa_pagamento)
+        self.processa_pagamento = processa_pagamento
+}
+Pagamento *-- CartaDiCredito
+Pagamento *-- PayPal
+@enduml
