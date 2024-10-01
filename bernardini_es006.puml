@@ -1,21 +1,24 @@
-@startuml name
-class Pagamento
-{
-def __init__(self, processa_pagamento):
-        self.processa_pagamento = processa_pagamento
+@startuml es6
+
+class Pagamento{
+    + processa_pagamento()
 }
-class CartaDiCredito
-{
-    def __init__(self, processa_pagamento):
-        super().__init__(processa_pagamento)
-        self.processa_pagamento = processa_pagamento
+
+class CartaDiCredito{
+        
+    +nome : str
+    +conto : str
+    +cvv : str
+    +data : str
+        
 }
-class PayPal
-{
-    def __init__(self, processa_pagamento):
-        super().__init__(processa_pagamento)
-        self.processa_pagamento = processa_pagamento
+    
+
+class PayPal{
+    +email : str
+    +password : str
+        
 }
-Pagamento *-- CartaDiCredito
-Pagamento *-- PayPal
+Pagamento <|--CartaDiCredito
+Pagamento <|--PayPal
 @enduml
