@@ -1,0 +1,29 @@
+@startuml es7
+
+class MaterialeBiblioteca{
+    + titolo : str
+    + anno_pubblicazione : int
+    + disponibile : bool
+    + prestito (disponibile : False)
+    + restituzione (disponibile : True)
+}
+
+class Libro{
+    + autore : str
+    + n_pagine : int
+}
+
+class Rivista{
+    + numero_edizione : int
+    + mese_pubblicazione : int
+}
+
+class DVD{
+    + regista : str
+    + durata : int
+}
+
+MaterialeBiblioteca <|-- Libro
+MaterialeBiblioteca <|-- DVD
+MaterialeBiblioteca <|-- Rivista
+@enduml
