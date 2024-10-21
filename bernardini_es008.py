@@ -117,3 +117,18 @@ class Dolce(Piatto):
 
 def calcola_conto(piatti_ordinati):
     return sum(piatto.prezzo for piatto in piatti_ordinati)
+
+def stampa_menu(piatti_ordinati):
+    return print(antipasto, primo, secondo, dolce)
+
+antipasto = Antipasto("Bruschetta", 5.0, ["Pane", "Pomodoro", "Basilico"], "Piccola")
+primo = Primo("Spaghetti alla Carbonara", 12.0, "Spaghetti", "Carbonara")
+secondo = Secondo("Bistecca alla Fiorentina", 25.0, "Manzo", "Media")
+dolce = Dolce("Tiramisù", 6.0, "Tiramisù", 450)
+
+piatti_ordinati = [antipasto, primo, secondo, dolce]
+conto_totale = calcola_conto(piatti_ordinati)
+print(f"Il conto totale è: {conto_totale}€")  # Output: Il conto totale è: 48.0€
+
+print("\nMenu del Ristorante:")
+stampa_menu(piatti_ordinati)
