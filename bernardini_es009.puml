@@ -1,0 +1,14 @@
+@startuml es9
+
+class Libro{
+    - _titolo: str
+    - _autore: str
+    - _pagine: int
+----
+    - get_titolo
+    - set_titolo
+    - get_autore
+    - set_autore
+    - get_pagine
+    - set_pagine
+}
