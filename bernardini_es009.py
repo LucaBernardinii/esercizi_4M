@@ -34,6 +34,4 @@ class Libro:
 libro = Libro("Il Signore degli Anelli", "J.R.R. Tolkien", 1200)
 print(libro._titolo) 
 libro._titolo = "Lo Hobbit" 
-print(libro._titolo)
-
-        
+print(libro._titolo)        
