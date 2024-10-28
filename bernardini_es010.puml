@@ -1,5 +1,10 @@
 @startuml es10
 
 class Frazione{
-
+    + numeratore: float
+    + denominatore: float
+    - __add__
+    - __sub__
+    - __mul__
+    - __str__
 }
