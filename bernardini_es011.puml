@@ -1,0 +1,53 @@
+@startuml es11
+
+class Ricetta{
+    + nome: str
+    + tempo_preparazione: int
+    + ingredienti: list
+    + difficolta: str
+___
+    - get_nome
+    - set_nome
+    - get_tempo_preparazione
+    - set_tempo_preparazione
+    - get_ingredienti
+    - set_ingredienti
+    - get_difficolta
+    - set_difficolta
+
+    - aggiungi_ingrediente
+}
+
+class Primo{
+    + tipo_pasta: str
+    + sugo: str
+___
+    - get_tipo_pasta
+    - set_tipo_pasta
+    - get_sugo
+    - set_sugo
+}
+
+class Secondo{
+    + tipo_carne: str
+    + cottura: str
+___
+    - get_tipo_carne
+    - set_tipo_carne
+    - get_cottura
+    - set_cottura
+}
+
+class Dolce{
+    + zucchero: int
+    + tipo_dolce: str
+___
+    - get_zucchero
+    - set_zucchero
+    - get_tipo_dolce
+    - set_tipo_dolce
+}
+
+Ricetta <|-- Primo
+Ricetta <|-- Secondo
+Ricetta <|-- Dolce
