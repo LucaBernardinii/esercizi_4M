@@ -1,4 +1,4 @@
-from _ex.ex_oop.e11 import ( # type: ignore
+from bernardini_es011 import ( # type: ignore
     Ricetta,
     Primo,
     Secondo,

@@ -68,6 +68,24 @@ class Secondo:
     def set_cottura(self, cottura):
         self.cottura = cottura
 
+class Dolce:
+    def __init__(self, nome, tempo_preparazione, ingredienti, difficolta, zucchero, tipo_dolce):
+        super().__init__(nome, tempo_preparazione, ingredienti, difficolta)
+        self.zucchero = zucchero
+        self.tipo_dolce = tipo_dolce
+
+    def get_zucchero(self):
+        return self.zucchero
+
+    def set_zucchero(self, zucchero):
+        self.zucchero = zucchero
+
+    def get_tipo_dolce(self):
+        return self.tipo_dolce
+
+    def set_tipo_dolce(self, tipo_dolce):
+        self.tipo_dolce = tipo_dolce
+
 
 
 primo = Primo("Spaghetti alla Carbonara", 20, ["Spaghetti", "Uova", "Pancetta"], "Media", "Spaghetti", "Carbonara")
