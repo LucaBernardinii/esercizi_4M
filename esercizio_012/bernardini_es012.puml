@@ -1,0 +1,25 @@
+@startuml es12
+
+class Auto{
+
+    + marca: str
+    + modello: str
+________
+
+    + get_marca() -> str
+    + set_marca(marca: str) -> None
+    + get_modello() -> str
+    + set_modello(modello: str) -> None
+}
+
+class Motore{
+
+    + numero_seriale: int
+    + tipo: str
+________
+
+    + get_numero_seriale() -> int
+    + set_numero_seriale(numero_seriale: str) -> None
+    + get_tipo() -> str
+    + set_tipo(tipo: str) -> None
+}
