@@ -32,6 +32,13 @@ class Ricetta:
     def __str__(self):
         return f"{self.nome} - {self.tempo_preparazione} min - Difficoltà: {self.difficolta}"
     
+    def aggiungi_ingrediente(self,ingrediente):
+        self.ingredienti.append(ingrediente)
+
+    def stampa_ricette(piatti_ordinati):
+        for p in piatti_ordinati:
+            print(f'{type(p).__name__}: {p} ')
+    
 class Primo:
     def __init__(self, nome, tempo_preparazione, ingredienti, difficolta, tipo_pasta, sugo):
         super().__init__(nome, tempo_preparazione, ingredienti, difficolta)
