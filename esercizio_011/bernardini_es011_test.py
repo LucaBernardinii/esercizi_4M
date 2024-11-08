@@ -1,10 +1,10 @@
-from bernardini_es011 import ( # type: ignore
+from esercizio_011.bernardini_es011 import ( # type: ignore
     Ricetta,
     Primo,
     Secondo,
     Dolce,
     verifica_ingredienti,
-    stampa_ricette,
+    stampa_ricette
 )  # type: ignore
 
 
