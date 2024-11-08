@@ -16,6 +16,9 @@ class Auto:
     def set_modello(self, modello):
         self.modello = modello
 
+    def modello(self,new_modello):
+        self._modello = new_modello
+
     def associa_motore(self, motore):
         self.motore = motore
         motore.associa_auto(self)
@@ -41,6 +44,9 @@ class Motore:
     
     def associa_auto(self, auto):
         self.auto = auto
+
+    def tipo(self,new_tipo):
+        self._tipo= new_tipo
 
 
 

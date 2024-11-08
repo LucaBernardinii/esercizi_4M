@@ -1,4 +1,4 @@
-from esercizio_012.bernardini_es012 import Auto, Motore  # type: ignore
+from bernardini_es012 import Auto, Motore  # type: ignore
 
 
 def test_auto_attributes():
