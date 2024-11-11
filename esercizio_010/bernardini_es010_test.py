@@ -1,4 +1,4 @@
-from bernardini_es010.py import Frazione 
+from bernardini_es010 import Frazione 
 
 
 def test_add():
