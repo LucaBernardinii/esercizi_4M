@@ -1,35 +1,41 @@
 class Libro:
-    def __init__(self, _titolo, _autore, _pagine):
-        self._titolo = _titolo
-        self._autore = _autore
-        self._pagine = _pagine
+    def __init__(self, titolo, autore, pagine):
+        self._titolo = titolo
+        self._autore = autore
+        self._pagine = pagine
 
     def get_titolo(self):
-        if len(titolo) > 0:
+        if self._titolo != None:
             return self._titolo
-        else:
-            print("Il titolo è vuoto.")
+        return False
 
-    def set_titolo(self, _titolo):
-        self._titolo = _titolo
+    def set_titolo(self, titolo):
+        if self._titolo != '':
+            self._titolo = titolo
+            return True
+        return False
 
     def get_autore(self):
-        if len(_autore) > 0:
+        if self._autore != None:
             return self._autore
-        else:
-            print("L'autore è vuoto.")
+        return False
 
-    def set_autore(self, _autore):
-        self._autore = _autore
-
+    def set_autore(self, autore):
+        if self._autore != '':
+            self._autore = autore
+            return True
+        return False
+    
     def get_pagine(self):
-        if len(_pagine) > 0:
+        if self._pagine != None:
             return self._pagine
-        else:
-            print("Il libro non ha pagine.")
+        return False
 
-    def set_pagine(self, _pagine):
-        self._pagine = _pagine
+    def set_pagine(self, pagine):
+        if self._pagine != '':
+            self._pagine = pagine
+            return True
+        return False
 
 libro = Libro("Il Signore degli Anelli", "J.R.R. Tolkien", 1200)
 print(libro._titolo) 
