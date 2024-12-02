@@ -3,7 +3,7 @@ classDiagram
     class Insegnante {
         +String nome
         +String cognome
-        +String strumentoinsegnato
+        +String strumento_insegnato
     }
 
     class Studente {

@@ -1,4 +1,32 @@
-class 
+class Insegnante:
+    def __init__(self, nome, cognome, strumento_insegnato):
+        self.nome = nome
+        self.cognome = cognome
+        self.strumento_insegnato = strumento_insegnato
+
+    @property
+    def nome(self):
+        return self.nome
+
+    @nome.setter
+    def nome(self, nome):
+        self._nome = nome
+
+    @property
+    def cognome(self):
+        return self.cognome
+
+    @cognome.setter
+    def cognome(self, cognome):
+        self.cognome = cognome
+
+    @property
+    def strumento_insegnato(self):
+        return self.strumento_insegnato
+
+    @strumento_insegnato.setter
+    def strumento_insegnato(self, strumento_insegnato):
+        self.strumento_insegnato = strumento_insegnato
 
 
 
