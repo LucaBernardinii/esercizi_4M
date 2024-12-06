@@ -19,6 +19,5 @@ classDiagram
 
     Insegnante "1" --> "1..*" Studente: insegna
     Studente "1..*" --> "1..*" Corso: iscritto
-    Insegnante "1" --> "1..*" Corso: tiene
 
 ```
