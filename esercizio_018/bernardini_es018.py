@@ -3,7 +3,6 @@ class Allenatore:
         self._nome = nome
         self._cognome = cognome
         self._specializzazione = specializzazione
-
         self.membri = []
         self.corsi = []
 
@@ -44,9 +43,9 @@ class Allenatore:
 class Membro:
     def __init__(self, nome, cognome):
         self._nome = nome
-        self.cognome = cognome
+        self._cognome = cognome
         self.corsi = []
-        self.set_scheda_allenamento = None
+        self.scheda_allenamento = None
 
     @property
     def nome(self):
@@ -70,12 +69,15 @@ class Membro:
             corso.set_membro(self)
 
     def set_scheda_allenamento(self, scheda_allenamento):
-        self.set_scheda_allenamento = scheda_allenamento
+        self.scheda_allenamento = scheda_allenamento
         scheda_allenamento.membro = self
 
     def set_allenatore(self, allenatore):
         self.allenatore = allenatore
         allenatore.corsi.append(self)
+
+    def __str__(self):
+        return f"{self.nome} {self.cognome}, Allenatore: {self.allenatore.nome}, Scheda Allenamento: {self.scheda_allenamento}"
 
 class Corso:
     def __init__(self, nome, durata, allenatore):
@@ -100,15 +102,22 @@ class Corso:
     def durata(self, durata):
         self._durata = durata
 
-    def set_membro(self, corso):
-        
+    def set_membro(self, membro):
+        if membro not in self.membri:
+            self.membri.append(membro)
+            membro.iscrivi_corso(self)
+
+    def set_allenatore(self, allenatore):
+        self.allenatore = allenatore
 
 class SchedaAllenamento:
-    def __init__(self):
-        self.lista_esercizi = []
-        self.membro = None
+    def __init__(self, membro, lista_esercizi):
+        self.membro = membro
+        self.lista_esercizi = lista_esercizi
 
-
+    def __str__(self):
+        esercizi_str = "\n".join(self.lista_esercizi)
+        return f"Scheda Allenamento di {self.membro.nome} {self.membro.cognome}:\n{esercizi_str}"
 
 def main():
     # Creazione degli allenatori
