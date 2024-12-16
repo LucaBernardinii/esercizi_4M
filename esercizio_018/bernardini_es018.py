@@ -3,8 +3,8 @@ class Allenatore:
         self._nome = nome
         self._cognome = cognome
         self._specializzazione = specializzazione
-        self.membri = []
-        self.corsi = []
+        self.membri = []    # molti membri
+        self.corsi = []     # molti corsi
 
     @property
     def nome(self):
@@ -30,12 +30,12 @@ class Allenatore:
     def specializzazione(self, specializzazione):
         self._specializzazione = specializzazione
 
-    def allena_membro(self, membro):
+    def allena_membro(self, membro):        # 1 a n
         if membro not in self.membri:    
             self.membri.append(membro)
             membro.set_allenatore(self)
 
-    def tieni_corso(self, corso):
+    def tieni_corso(self, corso):       # 1 a n
         if corso not in self.corsi:    
             self.corsi.append(corso)
             corso.set_allenatore(self)
