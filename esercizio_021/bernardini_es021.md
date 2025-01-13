@@ -4,9 +4,9 @@ classDiagram
         - camere: list[Camera]
 
         + aggiungi_camera() -> None
-        + prenota_camera() -> dict
+        + prenota_camera() -> bool
         + camere_disponibili() -> list[Camera]
-        + prenotazioni_effettuate() -> list[dict]
+        + prenotazioni_effettuate() -> list
     }
 
     class Camera {
