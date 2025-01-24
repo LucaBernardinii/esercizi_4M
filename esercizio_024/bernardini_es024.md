@@ -6,6 +6,16 @@ classDiagram
         - anno_uscita: int
         - genere: str
         - valutazione: float
+        + get_titolo()
+        + get_regista()
+        + get_anno_uscita()
+        + get_genere()
+        + get_valutazione()
+        + set_titolo()
+        + set_regista()
+        + set_anno_uscita()
+        + set_genere()
+        + set_valutazione()
         }
     
     class Libreria {

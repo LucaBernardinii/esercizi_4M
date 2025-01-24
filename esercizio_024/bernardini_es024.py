@@ -65,7 +65,7 @@ class Libreria:
 
     def valutazione_film(self, titolo, valutazione):
         film = self.cerca_film(titolo)
-        film.valutazione = valutazione
+        print(film.titolo, film.valutazione)
 
 
 film = Film("Titanic", "James Cameron", 1997, "Drammatico", 8)
