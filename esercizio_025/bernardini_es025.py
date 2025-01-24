@@ -66,8 +66,8 @@ class Ristorante:
     
 
 ristorante = Ristorante()
-prenotazione1 = Prenotazione("Mario Rossi", datetime(2021, 10, 10), 4, "Confermata")
-prenotazione2 = Prenotazione("Luca Bianchi", datetime(2021, 10, 11), 3, "Confermata")
+prenotazione1 = Prenotazione("Mario Rossi", datetime(2025, 10, 10), 4, "Confermata")
+prenotazione2 = Prenotazione("Luca Bianchi", datetime(2025, 10, 11), 3, "Confermata")
 ristorante.aggiungi_prenotazione(prenotazione1)
 ristorante.aggiungi_prenotazione(prenotazione2)
 ristorante.visualizza_prenotazioni()
