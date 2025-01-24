@@ -23,5 +23,5 @@ classDiagram
         + cancella_prenotazione()
         }
 
-
+Prenotazione "1..*" --> "1" Ristorante: in
 ```
