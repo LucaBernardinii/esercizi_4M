@@ -73,3 +73,33 @@ class SistemaPrenotazione:
     def __init__(self):
         self._lista_voli = []
         self._lista_prenotazioni = []
+
+    def aggiungi_volo(self, volo):
+        self._lista_voli.append(volo)
+
+    def aggiungi_prenotazione(self, prenotazione):
+        self._lista_prenotazioni.append(prenotazione)
+
+    def visualizza_info_voli(self):
+        for volo in self._lista_voli:
+            print(f"Numero volo: {volo.numero_volo}")
+            print(f"Destinazione: {volo.destinazione}")
+            print(f"Data e ora partenza: {volo.data_ora_partenza}")
+            print(f"Numero massimo passeggeri: {volo.numero_massimo_passeggeri}")
+            print()
+
+    def visualizza_info_prenotazioni(self):
+        for prenotazione in self._lista_prenotazioni:
+            print(f"Nome passeggero: {prenotazione.nome_passeggero}")
+            print(f"Tipo classe: {prenotazione.tipo_classe}")
+            print(f"Volo: {prenotazione.volo.numero_volo}")
+            print()
+
+
+volo = Volo("AZ123", "Roma", "2021-12-31 12:00", 200)
+prenotazione = Prenotazione("Mario Rossi", "Business", volo)
+sistema = SistemaPrenotazione()
+sistema.aggiungi_volo(volo)
+sistema.aggiungi_prenotazione(prenotazione)
+sistema.visualizza_info_voli()
+sistema.visualizza_info_prenotazioni()
