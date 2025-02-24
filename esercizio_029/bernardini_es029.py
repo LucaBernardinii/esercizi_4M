@@ -25,6 +25,17 @@ class ParcoNaturale:
             dispositivo = Dispositivo(tipo, stato)
             self.dispositivi.append(dispositivo)
 
+    def regola_ecosistema(self, dispositivo):
+        for ecosistema in self.ecosistemi:
+            if ecosistema._temperatura > 30:
+                dispositivo._tipo = "Ventilatore"
+                dispositivo._stato = True
+            if ecosistema._umidita < 60:
+                dispositivo._tipo = "Irrigatore"
+                dispositivo._stato = True
+            if ecosistema._qualita_aria < 40:
+                dispositivo._tipo = "Ventilatore"
+                dispositivo._stato = True
 
 class Ecosistema:
     def __init__(self, tipo, temperatura, umidita, qualita_aria):
@@ -118,15 +129,10 @@ class Sensore:
         self._valore = valore
 
 parco = ParcoNaturale("Parco Naturale")
-parco.monitora_parametri("Foresta", 25, 50, "Buona")
-parco.gestione_dispositivi("Termometro", True)
-parco.gestione_dispositivi("Umidificatore", False)
+parco.monitora_parametri("Foresta", 25, 50, 40)
+parco.gestione_dispositivi("Irrigatore", False)
 parco.gestione_dispositivi("Purificatore", True)
 parco.gestione_dispositivi("Ventilatore", False)
-parco.gestione_dispositivi("Lampada", True)
-parco.gestione_dispositivi("Sensore", False)
-parco.gestione_dispositivi("Sensore", True)
-parco.gestione_dispositivi("Sensore", False)
-parco.gestione_dispositivi("Sensore", True)
-parco.gestione_dispositivi("Sensore", False)
-parco.gestione_dispositivi("Sensore", True)
+parco.regola_ecosistema(parco.dispositivi[0])
+parco.regola_ecosistema(parco.dispositivi[1])
+parco.regola_ecosistema(parco.dispositivi[2])

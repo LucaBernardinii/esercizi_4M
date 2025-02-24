@@ -7,6 +7,7 @@
         - sensori: list[Sensore]
         + monitora_parametri()
         + gestione_dispositivi()
+        + regola_ecosistema()
     }
 
     class Ecosistema {
